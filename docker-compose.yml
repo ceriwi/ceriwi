@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  infoceriwi:
+    container_name: infoceriwi
+    image: jekyll/jekyll:3.8
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/srv/jekyll
+    stdin_open: true
+    tty: true
+    command: jekyll serve --watch --drafts
