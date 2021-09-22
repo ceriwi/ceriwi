@@ -13,15 +13,15 @@ Ceriwi crawler adalah crawler sederhana untuk mengumpulkan data dari halaman web
 
 pull dan up terlebih dahulu image ceriwi-crawler beserta image pendukung lainnya dengan menggunakan perintah dibawah ini.
 ```bash
-git clone git://github.com/ceriwi/example-config.git
+git clone https://github.com/ceriwi/example-config.git
 cd example-config
 docker-compose up -d
-docker exec myceriwi run --db-migration
+docker-compose exec myceriwi run --db-migration
 ```
 
 Untuk mengambil data berdasarkan rule yang sudah di buat, bisa menjalankan perintah berikut :
 ```bash
-cat config/blogjs-1.json | docker exec -i myceriwi run --config
+cat config/blog-1.json | docker-compose exec -T myceriwi run --config
 ```
 
 Hasil crawler bisa dilihat di http://localhost <br />
@@ -59,7 +59,7 @@ contoh :
 ```json
     "source": {
         "name":"demo get data blogjs part 2",
-        "url":"https://test.ceriwi.com/rule4/index.html",
+        "url":"https://ceriwi.github.io/test/rule4/index.html",
         "remove-query": true,
         "remove-fragment": true,
         "browser": {
