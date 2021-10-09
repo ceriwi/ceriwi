@@ -25,13 +25,10 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-      <a href="//ceriwi.github.io/ceriwi/" class="btn">Home</a>
+
+      <a href="{{ site.base }}" class="btn">Home</a>
       <a href="https://www.facebook.com/ceriwi/" class="btn">Fanspage</a>
-      <a href="https://www.paypal.me/msyaifularifin" class="btn">Donasi</a>
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+      <a href="{{ site.base }}/donasi" class="btn">Donasi</a>
 
     </header>
 

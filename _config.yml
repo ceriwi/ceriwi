@@ -3,3 +3,4 @@ description: Si laba-laba kecil pengumpul data
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-cayman
+base: //ceriwi.github.io/ceriwi
